@@ -420,8 +420,8 @@ cards:
                     mdi:pot-mix {% else %} mdi:pot-outline {%endif %}
                   entity: sensor.xiaomi_ru_917438569_maf65_turn_pot_p_2_14
                   icon_color: >
-                    {% if is_state(config.entity, 'ç')%} red {% else %} disabled
-                    {%endif %}
+                    {% if is_state(config.entity, 'Need Turn Over Pot')%} red {%
+                    else %} disabled {%endif %}
                   tap_action:
                     action: none
                   hold_action:
@@ -486,7 +486,7 @@ cards:
       cards:
         - type: heading
           icon: material-symbols-light:multicooker
-          heading: 0.3.8
+          heading: 0.3.8-1
           heading_style: title
           card_mod:
             style: |
@@ -554,22 +554,22 @@ cards:
         card_mod:
           style:
             mushroom-template-chip:nth-child(1)$: |
-              {% set opacity = 0.3 %}
+              {% set opacity = 0 %}
               {% include 'shadow_chip_icon.jinja' %}
             mushroom-template-chip:nth-child(2)$: |
-              {% set opacity = 0.3 %}
+              {% set opacity = 0 %}
               {% include 'shadow_chip_icon.jinja' %}
             mushroom-template-chip:nth-child(3)$: |
-              {% set opacity = 0.3 %}
+              {% set opacity = 0 %}
               {% include 'shadow_chip_icon.jinja' %}
             mushroom-template-chip:nth-child(4)$: |
-              {% set opacity = 0.3 %}
+              {% set opacity = 0 %}
               {% include 'shadow_chip_icon.jinja' %}
             mushroom-template-chip:nth-child(5)$: |
-              {% set opacity = 0.3 %}
+              {% set opacity = 0 %}
               {% include 'shadow_chip_icon.jinja' %}
             mushroom-template-chip:nth-child(6)$: |
-              {% set opacity = 0.3 %}
+              {% set opacity = 0 %}
               {% include 'shadow_chip_icon.jinja' %}
             .: |
 
@@ -607,7 +607,7 @@ cards:
         name: Edifier R1280DB
         icon: mdi:speaker
         margin_top_mobile: calc(100vh - 900px)
-        margin_top_desktop: calc(100vh - 1170px)
+        margin_top_desktop: calc(100vh - 1190px)
         tap_action:
           action: none
         double_tap_action:
